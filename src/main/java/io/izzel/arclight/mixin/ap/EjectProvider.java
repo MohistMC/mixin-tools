@@ -1,17 +1,14 @@
 package io.izzel.arclight.mixin.ap;
 
 import io.izzel.arclight.mixin.MixinTools;
-import io.izzel.arclight.mixin.injector.EjectorInfo;
-import org.spongepowered.asm.mixin.injection.struct.InjectionInfo;
-import org.spongepowered.asm.util.logging.MessageRouter;
-
+import java.util.Collections;
+import java.util.Set;
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.TypeElement;
-import java.util.Collections;
-import java.util.Set;
+import org.spongepowered.asm.util.logging.MessageRouter;
 
 public class EjectProvider extends AbstractProcessor {
 

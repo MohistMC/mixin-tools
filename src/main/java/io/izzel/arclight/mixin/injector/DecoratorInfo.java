@@ -1,15 +1,11 @@
 package io.izzel.arclight.mixin.injector;
 
+import io.izzel.arclight.mixin.Decorate;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.MethodNode;
 import org.spongepowered.asm.mixin.injection.code.Injector;
 import org.spongepowered.asm.mixin.injection.struct.InjectionInfo;
-import org.spongepowered.asm.mixin.injection.struct.InjectionNodes;
 import org.spongepowered.asm.mixin.transformer.MixinTargetContext;
-
-import io.izzel.arclight.mixin.Decorate;
-
-import java.util.List;
 
 @InjectionInfo.AnnotationType(Decorate.class)
 @InjectionInfo.HandlerPrefix("decorate")

@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group 'io.izzel.arclight'
+group 'com.mohistmc'
 version '1.2.6'
 
 repositories {
@@ -13,30 +13,32 @@ repositories {
 
 dependencies {
     implementation 'org.spongepowered:mixin:0.8.5'
-    implementation 'org.ow2.asm:asm:9.1'
-    implementation 'org.ow2.asm:asm-tree:9.1'
-    implementation 'org.ow2.asm:asm-commons:9.1'
-    implementation 'org.apache.logging.log4j:log4j-core:2.17.1'
+    implementation 'org.ow2.asm:asm:9.9.1'
+    implementation 'org.ow2.asm:asm-tree:9.9.1'
+    implementation 'org.ow2.asm:asm-commons:9.9.1'
+    implementation 'org.apache.logging.log4j:log4j-core:2.25.3'
 }
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
 
 java.withSourcesJar()
 
 publishing {
-    repositories {
-        maven {
-            name = "IzzelAliz"
-            url = uri("https://maven.izzel.io/releases")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name.toLowerCase()
+            version project.version
+            from components.java
         }
     }
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
+
+    repositories {
+        mavenLocal()
+
+        maven {
+            name = "MohistMC-Maven"
+            setUrl("file:/maven/")
         }
     }
 }

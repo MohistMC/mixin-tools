@@ -6,9 +6,6 @@ import io.izzel.arclight.mixin.injector.EjectorInfo;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.injection.struct.InjectionInfo;
 
-import java.util.Arrays;
-import java.util.concurrent.ThreadLocalRandom;
-
 public class MixinTools {
 
     public static void setup() {

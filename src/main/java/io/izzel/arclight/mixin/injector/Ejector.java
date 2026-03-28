@@ -1,5 +1,6 @@
 package io.izzel.arclight.mixin.injector;
 
+import java.util.Arrays;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AbstractInsnNode;
@@ -20,8 +21,6 @@ import org.spongepowered.asm.mixin.injection.throwables.InvalidInjectionExceptio
 import org.spongepowered.asm.util.Bytecode;
 import org.spongepowered.asm.util.Constants;
 import org.spongepowered.asm.util.SignaturePrinter;
-
-import java.util.Arrays;
 
 public class Ejector extends Injector {
 

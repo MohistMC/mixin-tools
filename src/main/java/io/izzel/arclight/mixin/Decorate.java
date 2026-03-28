@@ -1,13 +1,12 @@
 package io.izzel.arclight.mixin;
 
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Desc;
-import org.spongepowered.asm.mixin.injection.Slice;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Desc;
+import org.spongepowered.asm.mixin.injection.Slice;
 
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
